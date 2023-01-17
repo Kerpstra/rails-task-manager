@@ -1,1 +1,7 @@
-<h1>This will show a specific task later</h1>
+<h1><%= @task.title %></h1>
+
+<h3><%= @task.details %></h3>
+<p>Is this task completed? <BR>
+<%= @task.completed %></p>
+
+<%= link_to 'Back to Tasks', tasks_path %>
