@@ -12,12 +12,14 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_params)
+    task = Task.create(task_params)
+    task.save
+
   end
 
   private
 
   def task_params
-    params.require(:task).permit(:title, :description)
+    params.require(:task).permit(:title, :details)
   end
 end
