@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def create
     task = Task.create(task_params)
     task.save
-
+    redirect_to task_path(task)
   end
 
   private
